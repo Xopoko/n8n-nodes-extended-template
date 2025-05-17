@@ -1,3 +1,3 @@
-import { GitExtended } from './nodes/GitExtended/GitExtended.node';
+import { Example } from './nodes/Example/Example.node';
 
-export const nodes = [GitExtended];
+export const nodes = [Example];
