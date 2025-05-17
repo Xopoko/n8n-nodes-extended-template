@@ -1,9 +1,9 @@
 ![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
 
-# n8n-nodes-extended-git
+# n8n-nodes-extended-template
 
 This repo helps you get started building your own custom integrations for [n8n](https://n8n.io). It includes the node linter and other dependencies.
-This repository also provides a **Git Extended** node that lets you run Git commands directly from your workflows.
+This repository provides everything you need to build more advanced community nodes for n8n. It also includes a very small **Example** node that you can use as a reference when creating your own nodes.
 
 To make your custom node available to the community, you must create it as an npm package, and [submit it to the npm registry](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry).
 
@@ -38,15 +38,9 @@ These are the basic steps for working with the starter. For detailed guidance on
 10. Update the LICENSE file to use your details.
 11. [Publish](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry) your package to npm.
 
-## Git Extended node
+## Example node
 
-This repository includes a Git Extended node located in `/nodes/GitExtended`. It lets you execute common Git commands inside your workflows. The node supports operations like `clone`, `init`, `add`, `commit`, `push`, `pull`, `status`, `log`, `switch`, `checkout` and `merge`.
-
-Every operation requires a **Repository Path** parameter that defines the directory from which the Git command is executed. For `clone`, the repository will be created inside this directory.
-
-### Running Git commands
-
-The node relies on the `git` binary available on the machine running n8n. Make sure `git` is installed and accessible from the command line.
+The repository ships with a small Example node located in `/nodes/Example`. It simply returns a greeting for the provided name. Use this node as a starting point for building your own extended nodes.
 
 
 ## More information
