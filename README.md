@@ -40,7 +40,7 @@ These are the basic steps for working with the starter. For detailed guidance on
 
 ## Example node
 
-The repository ships with a small Example node located in `/nodes/Example`. It simply returns a greeting for the provided name. Use this node as a starting point for building your own extended nodes.
+The repository ships with a small Example node located in `/nodes/Example`. It simply returns a greeting for the provided name. You can optionally enable a **Reverse** option to return the greeting backwards. Use this node as a starting point for building your own extended nodes.
 
 
 ## More information

@@ -26,3 +26,10 @@ test('returns greeting', async () => {
   const result = await node.execute.call(context);
   assert.deepStrictEqual(result[0][0].json, { greeting: 'Hello Tester!' });
 });
+
+test('returns reversed greeting', async () => {
+  const node = new Example();
+  const context = new TestContext({ name: 'Tester', reverse: true });
+  const result = await node.execute.call(context);
+  assert.deepStrictEqual(result[0][0].json, { greeting: '!retseT olleH' });
+});

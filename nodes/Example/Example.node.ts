@@ -22,6 +22,13 @@ export class Example implements INodeType {
         default: 'World',
         description: 'Name to include in the greeting',
       },
+      {
+        displayName: 'Reverse',
+        name: 'reverse',
+        type: 'boolean',
+        default: false,
+        description: 'Whether to reverse the greeting text',
+      },
     ],
   };
 
@@ -31,7 +38,12 @@ export class Example implements INodeType {
 
     for (let i = 0; i < items.length; i++) {
       const name = this.getNodeParameter('name', i) as string;
-      returnData.push({ json: { greeting: `Hello ${name}!` } });
+      const reverse = this.getNodeParameter('reverse', i) as boolean;
+      let greeting = `Hello ${name}!`;
+      if (reverse) {
+        greeting = greeting.split('').reverse().join('');
+      }
+      returnData.push({ json: { greeting } });
     }
 
     return [returnData];
